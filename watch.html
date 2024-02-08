@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Watch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="homescreen">
+        <div class="description">SmartWatch</div>
+        <div class="watch">
+          <img src="assets/watch.png" alt="" />
+          <div class="screen">
+            <div class="top">
+              <h6 onclick="display('home')" id="toptime">00:00</h6>
+            </div>
+            <div class="home" id="home">
+              <h1 id="maintime">00:00</h1>
+              <div class="weather">
+                <h6 id="day">Saturday</h6>
+                <img class="weatherNow" />
+              </div>
+            </div>
+            <div class="message" id="message">
+              <div class="message_content">
+                <p onclick="messageDisplay()">Navina</p>
+                <hr />
+                <p onclick="messageDisplay()">Sneha</p>
+                <hr />
+                <p onclick="messageDisplay()">Nayaki</p>
+                <hr />
+                <p onclick="messageDisplay()">Kavya</p>
+                <hr />
+                <p onclick="messageDisplay()">Sharmi</p>
+                <hr />
+                <p onclick="messageDisplay()">Sandeep</p>
+                <hr />
+                <p onclick="messageDisplay()">Anjana</p>
+                <hr />
+                <p onclick="messageDisplay()">Pavi</p>
+              </div>
+            </div>
+            <div class="display_message" id="display_message">
+              <p>Your Food order:1567 is Delivered</p>
+            </div>
+            <div class="spotify" id="spotify">
+              <iframe src=" https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3?theme=0"  frameborder="0"></iframe>
+            </div>
+            <div class="timer" id="timer">
+              <h1 class="stopwatch">
+                <span id="min">00</span>:<span id="sec">00</span>:<span id="ms">00</span>
+              </h1>
+              <h6 class="lap" id="lap">00:00:00</h6>
+              <div class="icon_buttons">
+                <img src="assets/refresh.png" alt="refresh" onclick="reset()" />
+                <img src="assets/play.jpeg" alt="play" onclick="start()" />
+                <img src="assets/stop.png"alt="stop"class="stop" onclick="stop()"/>
+              </div>
+            </div>
+            <div class="icon_container">
+              <i class="fas fa-sms" style="font-size: 20px" id="message" onclick="display('message')"></i>
+              <i class='fas fa-music' style="font-size: 20px" id="music" onclick="display('spotify')"></i>
+              <i class="far fa-clock icons" style="font-size: 20px" id="timer" onclick="display('timer')"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
